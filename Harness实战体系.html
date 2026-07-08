@@ -13,7 +13,7 @@
     .nav a:before{content:"";position:absolute;left:4px;top:10px;bottom:10px;width:3px;border-radius:4px;background:transparent;transition:.22s}.nav a:hover,.nav a.active{background:rgba(168,216,216,.13);color:white}.nav a.active:before,.nav a:hover:before{background:var(--accent)}
     main{margin-left:220px;padding:42px clamp(22px,5vw,72px) 34px;max-width:1220px}.hero{animation:fade .6s ease both;margin-bottom:24px}.tag{display:inline-flex;align-items:center;color:var(--accent);background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:750}
     h1{font-size:clamp(38px,6.2vw,70px);line-height:1.04;margin:18px 0 14px;letter-spacing:-.045em}h2{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:25px}h3{margin:18px 0 8px;font-size:17px}.meta{color:var(--muted);margin:0 0 20px;max-width:800px}.section{scroll-margin-top:24px;margin:22px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:24px}.summary{border-left:5px solid var(--accent);background:linear-gradient(135deg,#fff,#F0FAFA)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{transition:.22s}.metric:hover{transform:translateY(-3px);box-shadow:0 22px 50px rgba(46,139,139,.16)}.metric b{display:block;font-size:28px;color:var(--accent);line-height:1.1}.metric span{color:var(--muted);font-size:13px}.icon{width:22px;height:22px;flex:0 0 auto;stroke:var(--accent);stroke-width:2;fill:none}.stepnum{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:var(--soft);color:var(--accent);font-weight:850;margin-right:10px}.why{background:#F8FCFC;border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:#3B5658}.check{border-left:4px solid var(--accent);background:#F0FAFA;border-radius:12px;padding:12px 14px;margin-top:14px}.tree,.code{background:#102020;color:#DDF6F6;border-radius:14px;padding:16px;overflow:auto;font:13px/1.65 "Cascadia Code","Consolas",monospace;white-space:pre}.code strong{color:#fff}.steps{display:grid;gap:18px}.mini{display:grid;grid-template-columns:1fr 1fr;gap:14px}.note{color:var(--muted);font-size:14px}.warn{background:#FFFDF6;border:1px solid #E7DFAE;border-radius:14px;padding:14px 16px}.done{display:grid;grid-template-columns:1fr 1fr;gap:16px}.point{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:15px;background:#F8FCFC;border:1px solid var(--line)}footer{color:var(--muted);font-size:13px;margin:26px 0 8px}.reveal{opacity:1;transform:none}.js .reveal{opacity:1;transform:none;transition:.22s ease}.js .reveal.visible{opacity:1;transform:none}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.metric{transition:.22s}.metric:hover{transform:translateY(-3px);box-shadow:0 22px 50px rgba(46,139,139,.16)}.metric b{display:block;font-size:28px;color:var(--accent);line-height:1.1}.metric span{color:var(--muted);font-size:13px}.icon{width:22px;height:22px;flex:0 0 auto;stroke:var(--accent);stroke-width:2;fill:none}.stepnum{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:var(--soft);color:var(--accent);font-weight:850;margin-right:10px}.why{background:#F8FCFC;border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:#3B5658}.check{border-left:4px solid var(--accent);background:#F0FAFA;border-radius:12px;padding:12px 14px;margin-top:14px}.trouble{border-left:4px solid #B7791F;background:#FFFDF6;border-radius:12px;padding:12px 14px;margin-top:14px}.trouble strong{color:#8A5A12}.tree,.code{background:#102020;color:#DDF6F6;border-radius:14px;padding:16px;overflow:auto;font:13px/1.65 "Cascadia Code","Consolas",monospace;white-space:pre}.code strong{color:#fff}.steps{display:grid;gap:18px}.mini{display:grid;grid-template-columns:1fr 1fr;gap:14px}.note{color:var(--muted);font-size:14px}.warn{background:#FFFDF6;border:1px solid #E7DFAE;border-radius:14px;padding:14px 16px}.done{display:grid;grid-template-columns:1fr 1fr;gap:16px}.point{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:15px;background:#F8FCFC;border:1px solid var(--line)}footer{color:var(--muted);font-size:13px;margin:26px 0 8px}.reveal{opacity:1;transform:none}.js .reveal{opacity:1;transform:none;transition:.22s ease}.js .reveal.visible{opacity:1;transform:none}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
     @media (max-width:860px){.nav{position:sticky;top:0;width:auto;height:auto;display:flex;gap:8px;overflow:auto;padding:10px 12px}.brand{display:none}.nav a{white-space:nowrap;margin:0}main{margin-left:0;padding:24px 16px}.grid,.mini,.done{grid-template-columns:1fr}.tree,.code{font-size:12px}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.metric,.nav a{transition:none}.hero{animation:none}}
     @media print{body{background:white}.nav{display:none}main{margin:0;padding:0}.card{box-shadow:none;break-inside:avoid}.reveal{opacity:1;transform:none}}
@@ -21,14 +21,14 @@
 </head>
 <body>
   <nav class="nav" aria-label="教程导航">
-    <div class="brand">Hermes 教程<span>从零搭建 Harness</span></div>
-    <a href="#summary" class="active">摘要</a><a href="#prepare">第〇步 准备</a><a href="#workspace">第一步 Workspace</a><a href="#rules">第二步 规则层</a><a href="#memory">第三步 记忆层</a><a href="#handoff">第四步 双 Agent</a><a href="#protocol">第五步 阿珂协议</a><a href="#backup">第六步 自动备份</a><a href="#report">第七步 报告模板</a><a href="#verify">第八步 验证</a>
+    <div class="brand">Hermes 教程<span>八步自检版</span></div>
+    <a href="#summary" class="active">摘要</a><a href="#prepare">第〇步 准备</a><a href="#workspace">第一步 Workspace</a><a href="#rules">第二步 规则层</a><a href="#memory">第三步 记忆层</a><a href="#handoff">第四步 双 Agent</a><a href="#protocol">第五步 执行协议</a><a href="#backup">第六步 自动备份</a><a href="#report">第七步 报告模板</a><a href="#verify">第八步 验证</a>
   </nav>
   <main>
     <header class="hero">
-      <span class="tag">一步一步 · 小白也能看懂 · 湖泊色教程</span>
+      <span class="tag">八步教学 · 每步自检 · 带排错指南</span>
       <h1>Hermes Agent 实战搭建教程</h1>
-      <p class="meta">这不是概念文章，而是一份能照着做的搭建手册。目标是把一个刚装好的 Hermes Agent，变成有规则、有记忆、有交接、有备份、有报告输出的可用工作系统。小白不需要先懂 Harness，按八步走就能跑通第一版。</p>
+      <p class="meta">这是一份给新手的搭建手册。你不需要先懂 Harness，按八步走：建 workspace、加规则、加记忆、做交接、加协议、做备份、配报告、最后验证。</p>
     </header>
 
     <section id="summary" class="section card summary reveal">
@@ -40,12 +40,12 @@
         <div class="card metric"><b>0 后端</b><span>全部用文件驱动</span></div>
       </div>
       <h3>最终目录长这样</h3>
-      <pre class="tree">D:\Codex\workspace\
+      <pre class="tree">D:\workspace\
 ├── AGENTS.md                  ← Agent 启动就认这个
 ├── 规则层\
 │   ├── 执行规则.md             ← 所有任务的总规则
 │   └── 模型规则\
-│       └── 阿珂执行脑协议.md    ← 执行脑约束
+│       └── 执行脑协议.md        ← 执行风格约束
 ├── 记忆层\
 │   ├── USER.md                ← 你是谁
 │   ├── MEMORY.md              ← 环境/工具/事实
@@ -59,8 +59,8 @@
 
     <section id="prepare" class="section card reveal">
       <h2><span class="stepnum">0</span>第〇步：你需要的准备</h2>
-      <h3>做什么</h3><p>确认你已经有基础工具，不然教程后面的文件、GitHub Pages 和自动备份跑不起来。</p>
-      <h3>为什么</h3><p class="why">Agent 本身只是大脑。workspace、GitHub、备份脚本这些东西，才是让它长期稳定工作的“身体”。</p>
+      <h3>做什么</h3><p>准备 Hermes Agent、一个 AI 编程助手、一个 GitHub 账号，以及一个你准备用来长期放 workspace 的磁盘。</p>
+      <h3>为什么</h3><p class="why">Agent 是大脑，workspace 是长期记忆和工作台。没有 workspace，换对话后很容易失去上下文。</p>
       <h3>怎么做</h3><pre class="code"># 检查 Git
  git --version
 
@@ -68,32 +68,32 @@
  python --version
 
 # 创建主目录
- mkdir D:\Codex</pre>
-      <div class="check">✅ 验证：PowerShell 能输出 Git 和 Python 版本，且 `D:\Codex` 文件夹存在。</div>
+ mkdir D:</pre>
+      <div class="check">✅ 验证：PowerShell 能输出 Git 和 Python 版本，且 `D:` 文件夹存在。</div>
     </section>
 
     <section id="workspace" class="section card reveal">
       <h2><span class="stepnum">1</span>第一步：建 workspace</h2>
       <h3>做什么</h3><p>创建一个专门给 Agent 读写的工作区，并放入最小版 `AGENTS.md`。</p>
       <h3>为什么</h3><p class="why">`AGENTS.md` 是 Agent 的项目级说明书。新对话、换模型、换工具时，它都能先读这个文件，知道这里的规矩。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\Codex\workspace
-notepad D:\Codex\workspace\AGENTS.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir D:\workspace
+notepad D:\workspace\AGENTS.md</pre>
       <h3>AGENTS.md 最小模板</h3><pre class="code"># AGENTS.md
 
 - 默认中文回答。
-- 非聊天任务先读 D:\Codex\workspace\规则层\执行规则.md。
+- 非聊天任务先读 D:\workspace\规则层\执行规则.md。
 - 默认只读，不要擅自删除、覆盖、提交或推送。
-- 项目文件统一放 D:\Codex\代码存放处\。
-- 完成任务后更新 D:\Codex\workspace\执行流转层\当前状态.md。</pre>
-      <div class="check">✅ 验证：重新打开 `AGENTS.md`，能看到这 5 条规则。</div>
+- 项目文件统一放 D:\代码存放处\。
+- 完成任务后更新 D:\workspace\执行流转层\当前状态.md。</pre>
+      <div class="check">✅ 自检：打开 `AGENTS.md`，文件名必须完全正确，不是 `AGENTS.md.txt`。</div><div class="trouble"><strong>出错怎么办：</strong>Agent 启动没读它时，先检查文件名大小写、位置是否在 workspace 根目录、编码是否 UTF-8。</div>
     </section>
 
     <section id="rules" class="section card reveal">
       <h2><span class="stepnum">2</span>第二步：搭规则层</h2>
       <h3>做什么</h3><p>创建 `规则层\执行规则.md`，告诉 Agent 接到任务后先做什么、再做什么、什么时候停。</p>
       <h3>为什么</h3><p class="why">没有规则层，Agent 容易凭感觉开干。规则层的作用就是把“先读需求、再执行、最后验证”固定下来。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\Codex\workspace\规则层
-notepad D:\Codex\workspace\规则层\执行规则.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\规则层
+notepad D:\workspace\规则层\执行规则.md</pre>
       <h3>执行规则最小模板</h3><pre class="code"># 执行规则
 
 ## 三条铁律
@@ -106,17 +106,17 @@ notepad D:\Codex\workspace\规则层\执行规则.md</pre>
 
 ## 收尾
 完成后更新 当前状态.md，记录做了什么。</pre>
-      <div class="check">✅ 验证：`D:\Codex\workspace\规则层\执行规则.md` 存在，并能读到“三条铁律”。</div>
+      <div class="check">✅ 自检：`规则层\执行规则.md` 存在，并能读到“三条铁律”。</div><div class="trouble"><strong>出错怎么办：</strong>Agent 跳过规则时，把“非聊天任务先读 规则层\执行规则.md”放到 AGENTS.md 第一段，不要埋到很后面。</div>
     </section>
 
     <section id="memory" class="section card reveal">
       <h2><span class="stepnum">3</span>第三步：建记忆层</h2>
       <h3>做什么</h3><p>创建三个记忆文件：`USER.md`、`MEMORY.md`、`SOUL.md`。</p>
       <h3>为什么</h3><p class="why">聊天记录会断，模型会换，但文件能留下。记忆层就是把重要事实从对话里拿出来，放进长期可读的地方。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\Codex\workspace\记忆层
-notepad D:\Codex\workspace\记忆层\USER.md
-notepad D:\Codex\workspace\记忆层\MEMORY.md
-notepad D:\Codex\workspace\记忆层\SOUL.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\记忆层
+notepad D:\workspace\记忆层\USER.md
+notepad D:\workspace\记忆层\MEMORY.md
+notepad D:\workspace\记忆层\SOUL.md</pre>
       <div class="mini"><pre class="code"># USER.md
 
 - 用户怎么称呼：
@@ -134,15 +134,15 @@ notepad D:\Codex\workspace\记忆层\SOUL.md</pre>
 - 说话风格：
 - 行为边界：
 - 和用户的协作方式：</pre>
-      <div class="check">✅ 验证：三个文件都能打开，并且每个文件至少有一个标题。</div>
+      <div class="check">✅ 自检：三个文件都存在，打开后中文不乱码。</div><div class="trouble"><strong>出错怎么办：</strong>Agent 记不住时，不要只说“你记住”。要把事实写进对应文件；如果乱码，用 VS Code 右下角编码改成 UTF-8 保存。</div>
     </section>
 
     <section id="handoff" class="section card reveal">
       <h2><span class="stepnum">4</span>第四步：双 Agent 协作</h2>
       <h3>做什么</h3><p>用一个 `当前状态.md` 做交接板。方案脑负责想清楚，执行脑负责落地。</p>
       <h3>为什么</h3><p class="why">多个 Agent 最怕互相不知道对方干到哪。文件交接能把“当前任务、已完成、下一步、阻塞点”固定下来。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\Codex\workspace\执行流转层
-notepad D:\Codex\workspace\执行流转层\当前状态.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\执行流转层
+notepad D:\workspace\执行流转层\当前状态.md</pre>
       <h3>当前状态.md 模板</h3><pre class="code"># 当前状态
 
 ## 当前任务
@@ -163,16 +163,16 @@ notepad D:\Codex\workspace\执行流转层\当前状态.md</pre>
 3. 目标是什么？
 4. 学到了什么？
 5. 做了什么？</pre>
-      <div class="check">✅ 验证：换一个对话框后，只读 `当前状态.md` 也能知道下一步该做什么。</div>
+      <div class="check">✅ 自检：新开一个对话，只给 Agent 读 `当前状态.md`，它能复述当前任务和下一步。</div><div class="trouble"><strong>出错怎么办：</strong>转接信息丢失时，检查当前状态是否只写了流水账。它必须包含“当前任务 / 已完成 / 下一步 / 阻塞点”。</div>
     </section>
 
     <section id="protocol" class="section card reveal">
-      <h2><span class="stepnum">5</span>第五步：加阿珂执行脑协议</h2>
+      <h2><span class="stepnum">5</span>第五步：加执行脑协议</h2>
       <h3>做什么</h3><p>创建一份专门约束执行风格的协议，让 Agent 不要闷头乱干。</p>
       <h3>为什么</h3><p class="why">`AGENTS.md` 管总规则，执行脑协议管具体做事风格：先审后干、敢砍简化、写完必验、成本意识。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\Codex\workspace\规则层\模型规则
-notepad D:\Codex\workspace\规则层\模型规则\阿珂执行脑协议.md</pre>
-      <h3>协议最小模板</h3><pre class="code"># 阿珂执行脑协议
+      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\规则层\模型规则
+notepad D:\workspace\规则层\模型规则\执行脑协议.md</pre>
+      <h3>协议最小模板</h3><pre class="code"># 执行脑协议
 
 1. 先审后干：读完方案先判断是否可行。
 2. 敢砍简化：过度设计直接压成 MVP。
@@ -181,8 +181,8 @@ notepad D:\Codex\workspace\规则层\模型规则\阿珂执行脑协议.md</pre>
 5. 诚实原则：卡了就说卡在哪里。
 6. 状态同步：项目结束更新 当前状态.md。</pre>
       <h3>挂到 AGENTS.md</h3><pre class="code"># 在 AGENTS.md 增加一行
-- 执行任务前读取 D:\Codex\workspace\规则层\模型规则\阿珂执行脑协议.md。</pre>
-      <div class="check">✅ 验证：打开 `AGENTS.md`，能看到执行脑协议路径。</div>
+- 执行任务前读取 D:\workspace\规则层\模型规则\执行脑协议.md。</pre>
+      <div class="check">✅ 自检：打开 `AGENTS.md`，能看到执行脑协议路径。</div><div class="trouble"><strong>出错怎么办：</strong>Agent 没按协议执行时，把协议路径放到 AGENTS.md 前 10 行；太靠后容易被长上下文淹没。</div><div class="trouble"><strong>出错怎么办：</strong>Agent 没按协议执行时，把协议路径放到 AGENTS.md 前 10 行；太靠后容易被长上下文淹没。</div>
     </section>
 
     <section id="backup" class="section card reveal">
@@ -191,7 +191,7 @@ notepad D:\Codex\workspace\规则层\模型规则\阿珂执行脑协议.md</pre>
       <h3>为什么</h3><p class="why">规则层和记忆层一旦丢了，Agent 就会“失忆”。备份是这套系统的保险。</p>
       <h3>怎么做</h3><pre class="code"># 1. 在 GitHub 创建私有仓库，例如 workspace-backup
 # 2. 本地初始化
-cd D:\Codex\workspace
+cd D:\workspace
 git init
 git remote add origin https://github.com/你的用户名/workspace-backup.git
 
@@ -200,50 +200,52 @@ git add .
 git commit -m "Initial workspace backup"
 git push -u origin main</pre>
       <h3>任务计划程序</h3><pre class="code"># 每天 00:00 运行备份脚本，示例：
-schtasks /create /tn WorkspaceBackup /tr "D:\Codex\备份\backup_workspace.bat" /sc daily /st 00:00</pre>
+schtasks /create /tn WorkspaceBackup /tr "D:\备份\backup_workspace.bat" /sc daily /st 00:00</pre>
       <div class="warn">注意：备份前必须排除 `.env`、Token、API Key、聊天记录、数据库和个人隐私文件。</div>
-      <div class="check">✅ 验证：GitHub 私有仓库能看到最新提交，本地 `git status` 是干净的。</div>
+      <div class="check">✅ 自检：GitHub 私有仓库能看到提交；本地 `git status` 没有意外文件。</div><div class="trouble"><strong>出错怎么办：</strong>中文路径乱码时，bat 只做启动器，逻辑放 ps1；push 失败时，检查 remote 地址和 GitHub 登录；误提交密钥时立刻撤销并换 key。</div>
     </section>
 
     <section id="report" class="section card reveal">
-      <h2><span class="stepnum">7</span>第七步：HTML 报告模板</h2>
-      <h3>做什么</h3><p>准备一个固定风格的 HTML 报告模板，用来输出项目复盘、教程、分析和交付总结。</p>
-      <h3>为什么</h3><p class="why">每次报告都重新设计会浪费时间。固定模板能让 Agent 专注内容，也方便 GitHub Pages 发布。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\Codex\workspace\报告
-notepad D:\Codex\workspace\规则层\报告规则.md
-notepad D:\Codex\workspace\规则层\报告模板.html</pre>
-      <h3>报告规则最小模板</h3><pre class="code"># 报告规则
+      <h2><span class="stepnum">7</span>第七步：配置自己的报告模板</h2>
+      <h3>做什么</h3><p>先写自己的报告规则，再做一个单文件 HTML 骨架。不要照抄别人的模板，把输出标准固定下来。</p>
+      <h3>为什么</h3><p class="why">报告模板的价值不是好看，而是固定输出标准：标题、摘要、步骤、验证、排错、结论。</p>
+      <h3>怎么做</h3><pre class="code">$Workspace = "D:\workspace"
+$ReportRules = @(
+  "# 报告规则",
+  "",
+  "- 单文件 HTML，CSS/JS 内嵌。",
+  "- 主色固定一个，例如湖泊色 #2E8B8B。",
+  "- 左侧导航，正文卡片。",
+  "- 每份教程必须有：做什么 / 为什么 / 怎么做 / 自检 / 排错。",
+  "- 不写入密钥、Token、隐私聊天记录。"
+)
+$ReportRules | Set-Content -Encoding UTF8 "$Workspace\规则层\报告规则.md"</pre>
+      <h3>HTML 骨架方向</h3><pre class="code">文件放这里：你的盘:\workspace\规则层\报告模板.html
 
-- 报告用湖泊色 #2E8B8B。
-- 单文件 HTML，CSS/JS 内嵌。
-- 左侧导航，正文卡片。
-- 完成后用浏览器打开验证。
-- 不写入密钥、Token、隐私聊天记录。</pre>
-      <h3>部署到 GitHub Pages</h3><pre class="code"># 创建公开仓库 reports
-# 把 HTML 文件复制进去后：
-git add .
-git commit -m "Add report"
-git push
-
-# 打开仓库 Settings → Pages → Deploy from branch → main</pre>
-      <div class="check">✅ 验证：浏览器能打开 `https://你的用户名.github.io/reports/xxx.html`。</div>
+最小结构：
+- nav：目录
+- main：正文
+- section：每一步
+- style：内嵌 CSS
+- script：只放必要交互</pre>
+      <div class="check">✅ 自检：复制模板后改一份新报告，本地浏览器能打开，打印预览能正常阅读。</div><div class="trouble"><strong>出错怎么办：</strong>页面空白时看控制台；图表不显示时检查 CDN；移动端乱时先删复杂布局；不要把模板改成重型前端项目。</div>
     </section>
 
     <section id="verify" class="section card reveal">
       <h2><span class="stepnum">8</span>第八步：验证整套系统</h2>
       <h3>做什么</h3><p>不要只看文件有没有创建，要验证 Agent 是否真的会按这套系统工作。</p>
       <h3>怎么做</h3><pre class="code"># 让 Agent 做一个小任务，例如：
-请按 D:\Codex\workspace\规则层\执行规则.md，生成一份今天的任务总结报告。</pre>
+请按 D:\workspace\规则层\执行规则.md，生成一份今天的任务总结报告。</pre>
       <h3>检查清单</h3><div class="done">
         <div class="point"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><h3>启动能读规则</h3><p>Agent 开始任务前会提到执行规则或当前状态。</p></div></div>
         <div class="point"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><h3>过程能交接</h3><p>`当前状态.md` 能看出做到哪一步。</p></div></div>
         <div class="point"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><h3>错误能沉淀</h3><p>踩坑会写进记忆或 BugTracker，而不是口头说说。</p></div></div>
         <div class="point"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><h3>结果能发布</h3><p>HTML 报告能本地打开，也能推到 GitHub Pages。</p></div></div>
       </div>
-      <div class="check">✅ 验证：你关掉当前对话，新开一个对话，只给它 `当前状态.md`，它仍然知道下一步该做什么。</div>
+      <div class="check">✅ 自检：关掉当前对话，新开一个，让 Agent 只读 `当前状态.md`，它仍然知道下一步。</div><div class="trouble"><strong>出错怎么办：</strong>如果恢复失败，说明当前状态写得太虚；如果报告打不开，先本地验证再推送；如果 Agent 又开始乱猜，把失败写进记忆层或 BugTracker。</div>
     </section>
 
-    <footer>Generated with 湖泊色报告模板 · 教程目标：小白能跟着跑 · 工具链：小墨出方案 + 阿珂执行</footer>
+    <footer>Generated with 湖泊色报告模板 · 教程目标：读者照着跑能自检 · 不包含密钥或私人数据</footer>
   </main>
   <script>
     document.documentElement.classList.add('js');
