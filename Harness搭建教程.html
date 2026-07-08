@@ -40,7 +40,7 @@
         <div class="card metric"><b>0 后端</b><span>全部用文件驱动</span></div>
       </div>
       <h3>最终目录长这样</h3>
-      <pre class="tree">D:\workspace\
+      <pre class="tree">C:\workspace\
 ├── AGENTS.md                  ← Agent 启动就认这个
 ├── 规则层\
 │   ├── 执行规则.md             ← 所有任务的总规则
@@ -64,7 +64,7 @@
           <tr><td>Hermes 自身 Memory / Profile / Backup 等机制</td><td>当前状态.md、双 Agent 文件交接、执行规则与验证规则</td></tr>
         </tbody>
       </table>
-      <p class="note-strong">本教程不是把所有能力都绑定在 Hermes 内部，而是以 Workspace 作为唯一真相源，让小墨、阿珂以及未来其他 Agent 都能读取同一套共享文件。</p>
+      <p class="note-strong">本教程不是把所有能力都绑定在 Hermes 内部，而是以 Workspace 作为唯一真相源，让Hermes、Codex以及未来其他 Agent 都能读取同一套共享文件。</p>
       <p class="note">注意：SOUL.md、USER.md、MEMORY.md 放在 workspace 的记忆层里是有意设计，不是路径错误；不要移动到 ~/.hermes/。</p>
     </section>
 
@@ -87,21 +87,21 @@
       <h2><span class="stepnum">1</span>第一步：建 workspace</h2>
       <h3>做什么</h3><p>创建一个专门给 Agent 读写的工作区，并放入最小版 `AGENTS.md`。</p>
       <h3>为什么</h3><p class="why">`AGENTS.md` 是 Agent 的项目级说明书。新对话、换模型、换工具时，它都能先读这个文件，知道这里的规矩。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\workspace
-notepad D:\workspace\AGENTS.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir C:\workspace
+notepad C:\workspace\AGENTS.md</pre>
       <h3>AGENTS.md 最小模板</h3><pre class="code"># AGENTS.md
 
 - 默认中文回答。
-- 非聊天任务先读 D:\workspace\规则层\执行规则.md。
+- 非聊天任务先读 C:\workspace\规则层\执行规则.md。
 - 默认只读，不要擅自删除、覆盖、提交或推送。
-- 项目文件统一放 D:\代码存放处\。
-- 完成任务后更新 D:\workspace\执行流转层\当前状态.md。</pre>
-      <div class="check">✅ 自检：先进入 `D:\workspace`，再启动 Agent；确认 `AGENTS.md` 位于这个 workspace 根目录，且文件名不是 `AGENTS.md.txt`。</div>
+- 项目文件统一放 C:\代码存放处\。
+- 完成任务后更新 C:\workspace\执行流转层\当前状态.md。</pre>
+      <div class="check">✅ 自检：先进入 `C:\workspace`，再启动 Agent；确认 `AGENTS.md` 位于这个 workspace 根目录，且文件名不是 `AGENTS.md.txt`。</div>
       <div class="trouble"><strong>出错怎么办：</strong>这是最高优先级排错项。即使 AGENTS.md 内容完全正确，如果 Agent 不是从正确的 Workspace 目录进入，也可能读不到项目规则。排错顺序：1. 检查当前工作目录 / 启动目录；2. 检查 AGENTS.md 是否位于正确 Workspace；3. 检查文件名和大小写；4. 检查文件内容和编码；5. 检查 AGENTS.md 是否正确指向其他规则文件。</div>
       <div class="mini"><pre class="code">错误：
 在其他目录启动 Agent，
-再期待它自动理解 D:\workspace 的规则。</pre><pre class="code">正确：
-先进入 D:\workspace，
+再期待它自动理解 C:\workspace 的规则。</pre><pre class="code">正确：
+先进入 C:\workspace，
 再启动或让 Agent 读取该 Workspace。</pre></div>
     </section>
 
@@ -109,8 +109,8 @@ notepad D:\workspace\AGENTS.md</pre>
       <h2><span class="stepnum">2</span>第二步：搭规则层</h2>
       <h3>做什么</h3><p>创建 `规则层\执行规则.md`，告诉 Agent 接到任务后先做什么、再做什么、什么时候停。</p>
       <h3>为什么</h3><p class="why">没有规则层，Agent 容易凭感觉开干。规则层的作用就是把“先读需求、再执行、最后验证”固定下来。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\规则层
-notepad D:\workspace\规则层\执行规则.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir C:\workspace\规则层
+notepad C:\workspace\规则层\执行规则.md</pre>
       <h3>执行规则最小模板</h3><pre class="code"># 执行规则
 
 ## 三条铁律
@@ -130,10 +130,10 @@ notepad D:\workspace\规则层\执行规则.md</pre>
       <h2><span class="stepnum">3</span>第三步：建记忆层</h2>
       <h3>做什么</h3><p>创建三个记忆文件：`USER.md`、`MEMORY.md`、`SOUL.md`。</p>
       <h3>为什么</h3><p class="why">聊天记录会断，模型会换，但文件能留下。记忆层就是把重要事实从对话里拿出来，放进长期可读的地方。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\记忆层
-notepad D:\workspace\记忆层\USER.md
-notepad D:\workspace\记忆层\MEMORY.md
-notepad D:\workspace\记忆层\SOUL.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir C:\workspace\记忆层
+notepad C:\workspace\记忆层\USER.md
+notepad C:\workspace\记忆层\MEMORY.md
+notepad C:\workspace\记忆层\SOUL.md</pre>
       <div class="mini"><pre class="code"># USER.md
 
 - 用户怎么称呼：
@@ -156,39 +156,39 @@ notepad D:\workspace\记忆层\SOUL.md</pre>
 
     <section id="handoff" class="section card reveal">
       <h2><span class="stepnum">4</span>第四步：双 Agent 协作</h2>
-      <h3>做什么</h3><p>把 `当前状态.md` 当成人控总控台，而不是普通记事本。马哥负责总控和决策，小墨负责分析/方案/复盘，阿珂负责执行/修改/验证。</p>
+      <h3>做什么</h3><p>把 `当前状态.md` 当成人控总控台，而不是普通记事本。用户负责总控和决策，Hermes负责分析/方案/复盘，Codex负责执行/修改/验证。</p>
       <h3>为什么</h3><p class="why">两个独立 Agent 不应该靠口头记忆传话。`当前状态.md` 是唯一任务交接面：谁负责、等谁决策、改了哪些文件、验证到哪一步，都写在这里。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\执行流转层
-notepad D:\workspace\执行流转层\当前状态.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir C:\workspace\执行流转层
+notepad C:\workspace\执行流转层\当前状态.md</pre>
       <h3>当前状态.md 总控台模板</h3><pre class="code"># 当前状态
 
 任务 ID：TASK-YYYYMMDD-001
 任务名称：[任务名]
 当前阶段：待分析 / 分析中 / 待决策 / 待执行 / 执行中 / 待验收 / 已完成
-当前负责人：[小墨/阿珂/马哥]
-验收人：马哥
+当前负责人：[Hermes/Codex/用户]
+验收人：用户
 依赖任务：无
 最后更新：YYYY-MM-DD
 
 ## 用户原始目标
-[马哥说了什么]
+[用户说了什么]
 
-## 小墨分析结论
+## Hermes分析结论
 [方案摘要]
 
-## 马哥决定
+## 用户决定
 采用：[是/否]
 不采用：[理由]
 暂缓：[理由]
 
-## 给阿珂的执行任务
+## 给Codex的执行任务
 [目标/修改位置/具体改动/不能改什么/验收标准]
 
-## 阿珂执行结果
+## Codex执行结果
 [改了什么/验证结果]
 
 ## 待确认问题
-[阻塞/需要马哥看]
+[阻塞/需要用户看]
 
 ## 下一步
 [具体动作]
@@ -199,24 +199,24 @@ notepad D:\workspace\执行流转层\当前状态.md</pre>
       <h3>状态流转</h3><pre class="flow">正常流转：待分析 → 分析中 → 待决策 → 待执行 → 执行中 → 待验收 → 已完成
 异常流转：待决策 → 暂缓
 异常流转：待验收 → 需要修改 → 待执行</pre>
-      <h3>小墨交付格式</h3><div class="mini"><pre class="code">第一层：给马哥看
+      <h3>Hermes交付格式</h3><div class="mini"><pre class="code">第一层：给用户看
 - 判断：方向对/不对/砍掉什么
 - 建议：怎么做
-- 风险：哪里可能翻车</pre><pre class="code">第二层：给阿珂的纯执行包
+- 风险：哪里可能翻车</pre><pre class="code">第二层：给Codex的纯执行包
 - 目标
 - 修改位置
 - 具体改动
 - 不能改什么
 - 验收标准</pre></div>
-      <div class="check">✅ 自检：新开一个对话，只给 Agent 读 `当前状态.md`，它能说出当前阶段、当前负责人、马哥决定、给阿珂的执行任务和下一步。</div><div class="trouble"><strong>出错怎么办：</strong>如果交接混乱，先看当前阶段是不是停在“待决策”或“待验收”；如果没有马哥决定，不要让执行 Agent 直接改文件。</div>
+      <div class="check">✅ 自检：新开一个对话，只给 Agent 读 `当前状态.md`，它能说出当前阶段、当前负责人、用户决定、给Codex的执行任务和下一步。</div><div class="trouble"><strong>出错怎么办：</strong>如果交接混乱，先看当前阶段是不是停在“待决策”或“待验收”；如果没有用户决定，不要让执行 Agent 直接改文件。</div>
     </section>
 
     <section id="protocol" class="section card reveal">
       <h2><span class="stepnum">5</span>第五步：加执行脑协议</h2>
       <h3>做什么</h3><p>创建一份专门约束执行风格的协议，让 Agent 不要闷头乱干。</p>
       <h3>为什么</h3><p class="why">`AGENTS.md` 管总规则，执行脑协议管具体做事风格：先审后干、敢砍简化、写完必验、成本意识。</p>
-      <h3>怎么做</h3><pre class="code">mkdir D:\workspace\规则层\模型规则
-notepad D:\workspace\规则层\模型规则\执行脑协议.md</pre>
+      <h3>怎么做</h3><pre class="code">mkdir C:\workspace\规则层\模型规则
+notepad C:\workspace\规则层\模型规则\执行脑协议.md</pre>
       <h3>协议最小模板</h3><pre class="code"># 执行脑协议
 
 1. 先审后干：读完方案先判断是否可行。
@@ -226,7 +226,7 @@ notepad D:\workspace\规则层\模型规则\执行脑协议.md</pre>
 5. 诚实原则：卡了就说卡在哪里。
 6. 状态同步：项目结束更新 当前状态.md。</pre>
       <h3>挂到 AGENTS.md</h3><pre class="code"># 在 AGENTS.md 增加一行
-- 执行任务前读取 D:\workspace\规则层\模型规则\执行脑协议.md。</pre>
+- 执行任务前读取 C:\workspace\规则层\模型规则\执行脑协议.md。</pre>
       <div class="check">✅ 自检：打开 `AGENTS.md`，能看到执行脑协议路径。</div><div class="trouble"><strong>出错怎么办：</strong>Agent 没按协议执行时，把协议路径放到 AGENTS.md 前 10 行；太靠后容易被长上下文淹没。</div>
     </section>
 
@@ -236,7 +236,7 @@ notepad D:\workspace\规则层\模型规则\执行脑协议.md</pre>
       <h3>为什么</h3><p class="why">规则层和记忆层一旦丢了，Agent 就会“失忆”。备份是这套系统的保险。</p>
       <h3>怎么做</h3><pre class="code"># 1. 在 GitHub 创建私有仓库，例如 workspace-backup
 # 2. 本地初始化
-cd D:\workspace
+cd C:\workspace
 git init
 git remote add origin https://github.com/你的用户名/workspace-backup.git
 
@@ -245,7 +245,7 @@ git add .
 git commit -m "Initial workspace backup"
 git push -u origin main</pre>
       <h3>任务计划程序</h3><pre class="code"># 每天 00:00 运行备份脚本，示例：
-schtasks /create /tn WorkspaceBackup /tr "D:\备份\backup_workspace.bat" /sc daily /st 00:00</pre>
+schtasks /create /tn WorkspaceBackup /tr "C:\备份\backup_workspace.bat" /sc daily /st 00:00</pre>
       <div class="warn">注意：备份前必须排除 `.env`、Token、API Key、聊天记录、数据库和个人隐私文件。</div>
       <div class="check">✅ 自检：GitHub 私有仓库能看到提交；本地 `git status` 没有意外文件。</div><div class="trouble"><strong>出错怎么办：</strong>中文路径乱码时，bat 只做启动器，逻辑放 ps1；push 失败时，检查 remote 地址和 GitHub 登录；误提交密钥时立刻撤销并换 key。</div>
     </section>
@@ -254,7 +254,7 @@ schtasks /create /tn WorkspaceBackup /tr "D:\备份\backup_workspace.bat" /sc da
       <h2><span class="stepnum">7</span>第七步：配置自己的报告模板</h2>
       <h3>做什么</h3><p>先写自己的报告规则，再做一个单文件 HTML 骨架。不要照抄别人的模板，把输出标准固定下来。</p>
       <h3>为什么</h3><p class="why">报告模板的价值不是好看，而是固定输出标准：标题、摘要、步骤、验证、排错、结论。</p>
-      <h3>怎么做</h3><pre class="code">$Workspace = "D:\workspace"
+      <h3>怎么做</h3><pre class="code">$Workspace = "C:\workspace"
 $ReportRules = @(
   "# 报告规则",
   "",
@@ -280,7 +280,7 @@ $ReportRules | Set-Content -Encoding UTF8 "$Workspace\规则层\报告规则.md"
       <h2><span class="stepnum">8</span>第八步：验证整套系统</h2>
       <h3>做什么</h3><p>不要只看文件有没有创建，要验证 Agent 是否真的会按这套系统工作。</p>
       <h3>怎么做</h3><pre class="code"># 让 Agent 做一个小任务，例如：
-请按 D:\workspace\规则层\执行规则.md，生成一份今天的任务总结报告。</pre>
+请按 C:\workspace\规则层\执行规则.md，生成一份今天的任务总结报告。</pre>
       <h3>检查清单</h3><div class="done">
         <div class="point"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><h3>启动能读规则</h3><p>Agent 开始任务前会提到执行规则或当前状态。</p></div></div>
         <div class="point"><svg class="icon" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><h3>过程能交接</h3><p>`当前状态.md` 能看出做到哪一步。</p></div></div>
